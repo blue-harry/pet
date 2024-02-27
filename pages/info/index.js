@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    bgTextStyle: 'dark',
+    scrollTop: '200rpx',
+    bgColor: '#ff0000',
+    bgColorTop: '#00ff00',
+    bgColorBottom: '#0000ff',
+    nbTitle: '标题bar',
+    nbLoading: true,
+    nbFrontColor: '#000000',
+    nbBackgroundColor: '#ffffff',
   },
 
   /**
