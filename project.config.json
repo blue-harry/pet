@@ -6,13 +6,19 @@
     "include": []
   },
   "setting": {
+    "packNpmManually": true,
     "coverView": true,
     "es6": true,
     "postcss": true,
     "minified": true,
     "enhance": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
