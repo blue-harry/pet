@@ -1,0 +1,5 @@
+<van-button type="primary" bind:click='handleClick'>按钮</van-button>
+
+
+
+

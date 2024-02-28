@@ -1,0 +1,1 @@
+<van-button type="primary" bind:click='onClickLogin'>用微信登录</van-button>

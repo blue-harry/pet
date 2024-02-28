@@ -1,4 +1,4 @@
-// pages/info/school.js
+// pages/info/mobile.js
 Page({
 
   /**
@@ -7,6 +7,21 @@ Page({
   data: {
 
   },
+
+onClick:()=>{
+  wx.request({
+    url: 'http://127.0.0.1:5000/auth/mobile', //仅为示例，并非真实的接口地址
+    method:'POST',
+    data:{"mobile":"13800000001","device":"wx"},
+    header: {
+      'content-type': 'application/json', // 默认值
+    },
+    success (res) {   
+      console.log(res.header['Set-Cookie'])//测试
+           wx.setStorageSync('Set-Cookie', res.header['Set-Cookie'])
+    }
+  })
+},
 
   /**
    * 生命周期函数--监听页面加载

@@ -1,4 +1,4 @@
-// pages/info/student.js
+// pages/info/mobile.js
 Page({
 
   /**
@@ -7,6 +7,34 @@ Page({
   data: {
 
   },
+
+onClickLogin:()=>{
+  wx.login({
+    success (res) {
+      if (res.code) {
+        //发起网络请求
+        wx.request({
+          url: 'http://127.0.0.1:5000/wxLogin',
+          method:'POST',
+          header: {
+            'content-type': 'application/json', // 默认值
+          },
+          data: {
+            code: res.code
+          },    
+          success (res) {   
+            console.log(res.data)//测试
+            console.log(res.header['Set-Cookie'])//测试
+            wx.setStorageSync('Set-Cookie', res.header['Set-Cookie'])
+          }
+
+        })
+      } else {
+        console.log('登录失败！' + res.errMsg)
+      }
+    }
+  })
+},
 
   /**
    * 生命周期函数--监听页面加载

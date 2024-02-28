@@ -1,0 +1,2 @@
+<!--pages/info/mobile.wxml-->
+<van-button type="primary" bind:click='onClick'>手机验证13800000001</van-button>
