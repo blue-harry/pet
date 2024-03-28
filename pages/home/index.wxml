@@ -1,4 +1,5 @@
-<van-button type="primary" bind:click='handleClick'>按钮</van-button>
+<van-button type="primary" bind:click='handleClick'>获取门店清单</van-button>
+<view wx:for="{{shops}}" wx:key="index"> {{item.name}} </view>
 
 
 

@@ -6,13 +6,14 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "默认标题",
+    "navigationBarTitleText": "标题：碧海狗屋",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents",
   "tabBar": {
+    "custom": true,
     "list": [
       {
         "pagePath": "pages/home/index",
@@ -34,5 +35,10 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index"  
+  }
+  
 }

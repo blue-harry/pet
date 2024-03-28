@@ -14,7 +14,8 @@ onClickLogin:()=>{
       if (res.code) {
         //发起网络请求
         wx.request({
-          url: 'http://127.0.0.1:5000/wxLogin',
+          url: 'http://spa.blue600.com/wxLogin',
+          // url: 'http://127.0.0.1:5000/wxLogin',
           method:'POST',
           header: {
             'content-type': 'application/json', // 默认值
@@ -54,7 +55,9 @@ onClickLogin:()=>{
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    if (typeof this.getTabBar === "function" && this.getTabBar()) {
+      this.getTabBar().setData({ active: 1 });
+    }
   },
 
   /**
